@@ -33,13 +33,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
 
         val adapter = RecyclerAdapter(this, this, ArrayList())
 
-        viewManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        mainRecyclerView.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                DividerItemDecoration.VERTICAL
-            )
-        )
+        mainRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
         bt_add_item.setOnClickListener {
             print("click")
@@ -48,6 +42,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
         }
 
         mainRecyclerView.adapter = adapter
+
+        mainRecyclerView.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                DividerItemDecoration.VERTICAL
+            )
+        )
     }
 
     override fun onItemClick(view: View, position: Int) {

@@ -17,9 +17,9 @@ class RecyclerAdapter(
     }
 
     // リストにデータを追加する
-    public fun addListItem(item: Item) {
+    fun addListItem(item: Item) {
         itemList.add(item)
-        //notifyItemInserted(itemList.size)
+        notifyItemInserted(itemList.size)
         notifyDataSetChanged() // これを忘れるとRecyclerViewにItemが反映されない
     }
 

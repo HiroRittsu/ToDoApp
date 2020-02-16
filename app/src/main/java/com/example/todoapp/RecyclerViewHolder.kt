@@ -15,7 +15,7 @@ class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     val itemTextView: TextView = view.findViewById(R.id.itemTextView)
     val itemImageView: ImageView = view.findViewById(R.id.itemImageView)
-    val itemImageButton: ImageButton = view.findViewById(R.id.itemImageView)
+    val itemImageButton: ImageButton = view.findViewById(R.id.imageButton)
 
     init {
         // layoutの初期設定するときはココ
